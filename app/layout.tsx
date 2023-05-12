@@ -15,7 +15,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      <header className='flex justify-between py-4 px-10 border-gray-200 border-b-2'>
+        <div className='font-bold'>
+          Where in the world?
+        </div>
+        <button>
+          🌜  Dark mode
+        </button>
+      </header>
+      {children}
+      </body>
     </html>
   )
 }

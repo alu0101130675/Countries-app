@@ -12,7 +12,14 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      gridTemplateRows:{
+        'countryCard' : '1fr 2fr'
+      }
+    },
+    boxShadow:{
+      'ProjectShadow' : '0px 4px 12px'
     },
   },
+  darkMode:'class',
   plugins: [],
 }
