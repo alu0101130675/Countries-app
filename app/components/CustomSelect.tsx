@@ -14,14 +14,14 @@ export const CustomSelect:React.FC<CustomSelectInterface> = ({options, placehold
     setRegion(region)  
     }
   return (
-    <div className='w-1/2 md:w-full'>
-        <label className="relative rounded flex flex-col bg-white cursor-pointer">
+    <div className='w-1/2 md:w-full dark:bg-slate-800'>
+        <label className="dark:bg-slate-700 relative rounded flex flex-col bg-white cursor-pointer">
           <div className="flex justify-between items-center pl-5 pr-2">
           <span className="flex-1">{region || placeholder}</span>
           <span className=""><ChevronIcon/></span>
           </div>
           <input className="peer" type="checkbox" hidden/>
-          <div className="bg-white absolute rounded top-[115%] w-full cursor-pointer py-3 hidden peer-checked:flex flex-col flex-1">
+          <div className="dark:bg-slate-700 bg-white absolute rounded top-[115%] w-full cursor-pointer py-3 hidden peer-checked:flex flex-col flex-1">
             {options.map(option => 
             <span 
               className="hover:bg-slate-100 px-5 py-1" 

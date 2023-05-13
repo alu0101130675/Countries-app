@@ -1,3 +1,4 @@
+import { Button } from './components/ToogleButton'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -15,14 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-      <header className='flex justify-between py-4 px-10 border-gray-200 border-b-2'>
+      <body className={`${inter.className} dark:text-white`}>
+      <header className='drop-shadow-2xl flex justify-between py-4 px-10 shadow-slate-100 dark:bg-slate-700 dark:shadow-slate-900'>
         <div className='font-bold'>
           Where in the world?
         </div>
-        <button>
-          🌜  Dark mode
-        </button>
+        <Button/>
       </header>
       {children}
       </body>

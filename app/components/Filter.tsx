@@ -21,8 +21,8 @@ export const Filter:React.FC<FilterInterface> = ({countries}) => {
   return (
     <>
      <section className="grid grid-cols-1 gap-2 md:grid-cols-[30%,15%] justify-between pt-12 mx-10">
-      <input onChange={handleChange } className="p-3 pl-5 shadow-lg rounded shadow-gray-200" placeholder="🔍   :  Search for a country..." type="text" />
-      <CustomSelect region={region} setRegion={setRegion} options={regions} placeholder="seleciona algo"/>
+      <input onChange={handleChange } className="p-3 pl-5 shadow-lg rounded shadow-gray-200 dark:bg-slate-700" placeholder="🔍     Search for a country..." type="text" />
+      <CustomSelect region={region} setRegion={setRegion} options={regions} placeholder="Filter by region"/>
     </section>    
     <CountryDisplay countries={countriesFiltered}/>
     </>

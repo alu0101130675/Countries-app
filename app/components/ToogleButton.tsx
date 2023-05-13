@@ -1,14 +1,23 @@
 "use client"
-import { useTheme } from "next-themes";
-export const Button = () => {
-    const { systemTheme, theme, setTheme } = useTheme();
-    const currentTheme = theme === 'system' ? systemTheme : theme;
 
-    return (
-        <button
-            onClick={() => theme == "dark"? setTheme('light'): setTheme("dark")}
-            className='bg-gray-800 dark:bg-gray-50 hover:bg-gray-600 dark:hover:bg-gray-300 transition-all duration-100 text-white dark:text-gray-800 px-8 py-2 text-2xl md:text-4xl rounded-lg absolute bottom-32'>
-            Toggle Mode
-        </button>
-    )
+import { useState } from "react"
+
+export const Button = () => {
+  const [darkFlag,setDarkFlag] = useState<boolean>(false)
+    if (typeof window !== "undefined") {
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+      } else {
+      document.documentElement.classList.remove('dark')
+      }
+  } 
+  return (
+    <button onClick={()=> { 
+      const newDarkFlag = !darkFlag
+      setDarkFlag(newDarkFlag)
+      localStorage.theme = newDarkFlag ? 'dark' : 'light'
+      }}>
+       🌜 Dark Mode
+    </button>
+  )
 }

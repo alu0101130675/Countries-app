@@ -20,11 +20,11 @@ export default async function Country({params}:CountryInterface) {
   const nativeName =  countryInfo.name.nativeName[nativeNameKeys[0]].common
   const borders = await Promise.all(countryInfo.borders.map(border => getCountryNameByCca2Code(border))) 
   return (
-    <div className='py-12 mx-10'>
+    <div className='py-12 pb-56 px-10 dark:bg-slate-800'>
       <Link
       href={'/'}
-       className="py-2 px-8 rounded shadow-ProjectShadow shadow-gray-200">
-        Back
+       className="py-2 px-8 rounded shadow-ProjectShadow shadow-gray-200 dark:shadow-black">
+        ⬅️ Back
       </Link>
       <div className="flex flex-col lg:flex-row gap-16 mt-20">
         <Image
@@ -82,7 +82,7 @@ export default async function Country({params}:CountryInterface) {
             {borders.map(border => 
               <Link
                 href={`/${border}`}
-                className="py-1 px-3 border-2 border-gray-200 rounded-lg text-center align-middle" 
+                className="py-1 px-3 shadow-ProjectShadow shadow-slate-200 dark:shadow-black rounded-lg text-center align-middle dark:bg-slate-700" 
                 key={border}
               >
                 {border}

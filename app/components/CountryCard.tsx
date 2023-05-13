@@ -12,9 +12,9 @@ export const CountryCard:React.FC<CountryCardInterface> = ({
   capital,name,population,region,src
 }) => {
   return (
-    <div className="rounded-md flex flex-col gap-2 h-full w-full justify-between bg-white shadow-lg shadow-grey ">
+    <div className="rounded-md flex flex-col gap-2 h-full w-full justify-between bg-white dark:bg-slate-700 shadow-lg shadow-grey ">
       <Image 
-      className="w-full flex-1 rounded-md"
+      className="w-full flex-1 rounded-t-md object-cover h-full"
       alt={`${name} flag`}
       src={src}
       height={80}
