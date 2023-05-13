@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} dark:text-white`}>
+      <body className={`${inter.className} dark:text-white  dark:bg-slate-800`}>
       <header className='drop-shadow-2xl flex justify-between py-4 px-10 shadow-slate-100 dark:bg-slate-700 dark:shadow-slate-900'>
         <div className='font-bold'>
           Where in the world?
