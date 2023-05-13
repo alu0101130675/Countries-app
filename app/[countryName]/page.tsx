@@ -28,7 +28,7 @@ export default async function Country({params}:CountryInterface) {
       </Link>
       <div className="flex flex-col lg:flex-row gap-16 mt-20">
         <Image
-        className="flex-1 w-full  lg:h-96 lg:mr-11"
+        className="flex-1 lg:h-96 lg:mr-11 object-fill"
         width={50}
         height={25}
         src={countryInfo.flags.svg}
